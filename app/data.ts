@@ -34,11 +34,10 @@ type Skill = {
 export const PRODUCTS: Product[] = [
   {
     name: 'Bulba Cloud',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+    description: 'Smart & Reliable Digital Solutions for Everyone.',
+    link: 'https://bulba.cloud/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dxurnpbrc/video/upload/v1742080791/iofanevzavqso4joxjj5.mov',
     id: 'project1',
   },
 ]
@@ -52,6 +51,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: 'https://github.com/fadilsflow',
     id: 'work1',
   },
+
   {
     company: 'Freelance',
     title: 'Full-stack Web Developer',
@@ -63,26 +63,26 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
+  // {
+  //   title: 'Exploring the Intersection of Design, AI, and Design Engineering',
+  //   description: 'How AI is changing the way we design',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-1',
+  // },
+  // {
+  //   title: 'Why I left my job to start my own company',
+  //   description:
+  //     'A deep dive into my decision to leave my job and start my own company',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-2',
+  // },
+  // {
+  //   title: 'What I learned from my first year of freelancing',
+  //   description:
+  //     'A look back at my first year of freelancing and what I learned',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-3',
+  // },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -144,10 +144,10 @@ export const SKILLS: Skill[] = [
     label: 'Git',
     link: 'https://git-scm.com/',
   },
-  {
-    label: 'Docker',
-    link: 'https://www.docker.com/',
-  },
+  // {
+  //   label: 'Docker',
+  //   link: 'https://www.docker.com/',
+  // },
 ]
 
 export const EMAIL = 'wahyufadil1140@gmail.com'

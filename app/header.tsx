@@ -13,8 +13,8 @@ export function Header() {
 
           <Avatar>
             <AvatarImage
-              src="/https://res.cloudinary.com/dxurnpbrc/image/upload/v1742120154/profile_mtt1fl.png" asChild>
-              <Image src='/https://res.cloudinary.com/dxurnpbrc/image/upload/v1742120154/profile_mtt1fl.png'
+              src="https://res.cloudinary.com/dxurnpbrc/image/upload/v1742120154/profile_mtt1fl.png" asChild>
+              <Image src='https://res.cloudinary.com/dxurnpbrc/image/upload/v1742120154/profile_mtt1fl.png'
                 width={40} height={40} alt="Profile Picture - Wahyu Akhmad Fadillah " priority
               />
 

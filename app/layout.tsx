@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { WEBSITE_URL } from '@/lib/constants'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -12,42 +13,48 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
+  title: {
+    default: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
+    template: '%s | Fullstack Web Developer - Wahyu Akhmad Fadillah',
+  },
   description:
-    'Passionate Fullstack Web Developer specializing in high-performance, intuitive, and visually stunning web experiences. Expert in JavaScript, React, Next.js, Node.js, and UI/UX design.',
-  icons: 'profile.svg',
-  abstract:
-    'Passionate about crafting intuitive, high-performance, and visually stunning web experiences. I thrive at the intersection of design and development, ensuring every interaction feels seamless and every detail is thoughtfully executed.',
-  creator: 'Wahyu Akhmad Fadillah',
-  keywords:
-    'Fullstack Developer, Web Developer, Next.js, React, JavaScript, UI/UX, Frontend, Backend, Node.js, Portfolio, Web Design, Software Engineer',
+    'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
   openGraph: {
     title: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
     description:
-      'Experienced Fullstack Developer with expertise in JavaScript, React, Next.js, and Node.js. Crafting seamless and visually appealing web experiences.',
-    url: 'https://your-portfolio.com', // Ganti dengan URL portofoliomu
+      'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
+    url: WEBSITE_URL,
+    siteName: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
+    locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: 'https://your-portfolio.com/profile-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
-      },
-    ],
+  },
+  alternates: {
+    canonical: WEBSITE_URL,
+  },
+  icons: {
+    icon: '/profile.svg',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@your_twitter_handle', // Ganti dengan username Twitter-mu
-    creator: '@your_twitter_handle',
     title: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
     description:
-      'Experienced Fullstack Developer with expertise in JavaScript, React, Next.js, and Node.js. Crafting seamless and visually appealing web experiences.',
-    images: ['https://your-portfolio.com/profile-image.jpg'],
-  },
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://your-portfolio.com', // Ganti dengan URL portofoliomu
+      'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
+    site: '@yourTwitterHandle',
+    creator: '@yourTwitterHandle',
+    images: [`${WEBSITE_URL}/profile.png`],
   },
 }
 

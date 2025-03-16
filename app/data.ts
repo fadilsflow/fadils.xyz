@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Bulba Cloud',
-    title: 'CEO',
+    title: 'Chief Technology Officer',
     start: '2025',
     end: 'Present',
     link: 'https://github.com/fadilsflow',

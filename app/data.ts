@@ -48,7 +48,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Chief Technology Officer',
     start: '2025',
     end: 'Present',
-    link: 'https://github.com/fadilsflow',
+    link: 'https://bulba.cloud',
     id: 'work1',
   },
 
@@ -58,7 +58,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: '2025',
     end: 'Present',
     link: 'https://github.com/fadilsflow',
-    id: 'work3',
+    id: 'work2',
   },
 ]
 
@@ -104,6 +104,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ]
 export const SKILLS: Skill[] = [
+  {
+    label: 'Linux',
+    link: 'https://linux.org/',
+  },
   {
     label: 'React',
     link: 'https://react.dev/',

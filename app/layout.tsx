@@ -87,7 +87,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      // Di dalam fungsi RootLayout, tambahkan di dalam tag{' '}
       <head>
         <Script
           id="json-ld"

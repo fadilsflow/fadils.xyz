@@ -1,6 +1,5 @@
 'use client'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { TextEffect } from '@/components/ui/text-effect'
+
 import Image from 'next/image'
 
 import Link from 'next/link'

@@ -15,18 +15,18 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
-    template: '%s | Fullstack Web Developer - Wahyu Akhmad Fadillah',
+    default: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
+    template: '%s | Wahyu Akhmad Fadillah',
   },
   description:
-    'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
+    'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
   openGraph: {
-    title: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
+    title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     description:
-      'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
+      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
     url: WEBSITE_URL,
-    siteName: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
-    locale: 'en_US',
+    siteName: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
+    locale: 'id_ID',
     type: 'website',
     images: [
       {
@@ -40,9 +40,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: WEBSITE_URL,
   },
-
   icons: {
-    icon: '/profile.svg',
+    icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
@@ -57,19 +56,33 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  keywords:
-    'fullstack developer, web development, javascript, react, next.js, node.js',
+  keywords: [
+    'fullstack developer',
+    'web development',
+    'javascript',
+    'react',
+    'next.js',
+    'node.js',
+    'wahyu',
+    'wahyu akhmad',
+    'wahyu akhmad fadillah',
+    'fadils',
+    'fadil',
+    'wahyu fadil',
+    'wahyu fadillah',
+  ],
   twitter: {
     card: 'summary_large_image',
-    title: 'Fullstack Web Developer - Wahyu Akhmad Fadillah',
+    title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     description:
-      'Passionate Fullstack Developer crafting high-performance, intuitive, and stunning web experiences. Expert in JavaScript, React, Next.js & Node.js',
+      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
     site: '@wahyuakhmadfad3',
     creator: '@wahyuakhmadfad3',
     images: [`${WEBSITE_URL}/profile.png`],
   },
 }
 
+// Menggunakan font Geist dan Geist Mono
 const geist = Geist({
   variable: '--font-geist',
   subsets: ['latin'],
@@ -88,79 +101,16 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="57x57"
-          href="/apple-icon-57x57.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="60x60"
-          href="/apple-icon-60x60.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href="/apple-icon-72x72.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/apple-icon-76x76.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="/apple-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="/apple-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="/apple-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="/apple-icon-152x152.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/android-icon-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
+        {/* Ikon untuk berbagai perangkat */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Metadata tambahan */}
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* Structured Data (JSON-LD) */}
         <Script
           id="json-ld"
           type="application/ld+json"
@@ -170,7 +120,7 @@ export default function RootLayout({
               '@type': 'Person',
               name: 'Wahyu Akhmad Fadillah',
               url: WEBSITE_URL,
-              image: 'https://fadils.xyz/profile.png',
+              image: `${WEBSITE_URL}/profile.png`,
               jobTitle: 'Fullstack Web Developer',
               knowsAbout: ['JavaScript', 'React', 'Next.js', 'Node.js'],
               sameAs: [
@@ -191,13 +141,17 @@ export default function RootLayout({
           storageKey="theme"
           defaultTheme="system"
         >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
-              <Header />
-              {children}
+          <div className="flex min-h-screen w-full flex-col">
+            {/* Header */}
+            <Header />
 
-              <Footer />
-            </div>
+            {/* Konten utama */}
+            <main className="mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+              {children}
+            </main>
+
+            {/* Footer */}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

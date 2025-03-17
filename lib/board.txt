@@ -1,0 +1,115 @@
+
+// Perluasan data.ts untuk dukungan halaman baru
+// src/pages/data.ts
+export const EMAIL = 'contact@example.com';
+
+export const SOCIAL_LINKS = [
+  {
+    label: 'Twitter',
+    link: 'https://twitter.com/yourusername',
+  },
+  {
+    label: 'GitHub',
+    link: 'https://github.com/yourusername',
+  },
+  {
+    label: 'LinkedIn',
+    link: 'https://linkedin.com/in/yourusername',
+  },
+  {
+    label: 'Instagram',
+    link: 'https://instagram.com/yourusername',
+  },
+];
+
+export const SKILLS = [
+  { label: 'React', link: 'https://reactjs.org/' },
+  { label: 'Next.js', link: 'https://nextjs.org/' },
+  { label: 'TypeScript', link: 'https://www.typescriptlang.org/' },
+  { label: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
+  { label: 'JavaScript', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  { label: 'Node.js', link: 'https://nodejs.org/' },
+  { label: 'CSS/SCSS', link: 'https://sass-lang.com/' },
+  { label: 'UI/UX Design', link: '#' },
+  { label: 'Responsive Design', link: '#' },
+  { label: 'Figma', link: 'https://www.figma.com/' },
+  { label: 'GraphQL', link: 'https://graphql.org/' },
+  { label: 'REST API', link: '#' },
+  { label: 'Git', link: 'https://git-scm.com/' },
+];
+
+export const WORK_EXPERIENCE = [
+  {
+    id: '1',
+    title: 'Senior Frontend Developer',
+    company: 'Tech Innovations Inc.',
+    start: 'Jan 2022',
+    end: 'Present',
+    link: '#',
+  },
+  {
+    id: '2',
+    title: 'UI/UX Developer',
+    company: 'Creative Studio',
+    start: 'Mar 2020',
+    end: 'Dec 2021',
+    link: '#',
+  },
+  {
+    id: '3',
+    title: 'Frontend Developer',
+    company: 'Web Solutions Ltd.',
+    start: 'Jun 2018',
+    end: 'Feb 2020',
+    link: '#',
+  },
+];
+
+export const PRODUCTS = [
+  {
+    name: 'Product One',
+    description: 'A responsive web application with modern UI and advanced features.',
+    video: '/videos/product1.mp4',
+    link: '#',
+  },
+  {
+    name: 'Product Two',
+    description: 'An e-commerce platform built with Next.js and headless CMS.',
+    video: '/videos/product2.mp4',
+    link: '#',
+  },
+];
+
+export const BLOG_POSTS = [
+  {
+    uid: '1',
+    title: 'Building Accessible React Components',
+    description: 'Learn how to create React components that are accessible to all users.',
+    link: '/blog/building-accessible-react-components',
+    slug: 'building-accessible-react-components',
+    date: 'March 10, 2024',
+    category: 'React',
+    keywords: 'accessibility, react, components, a11y',
+    content: 'Full content of the blog post would go here...',
+  },
+  {
+    uid: '2',
+    title: 'Optimizing Next.js Applications for Performance',
+    description: 'Strategies and techniques to improve the performance of your Next.js applications.',
+    link: '/blog/optimizing-nextjs-applications',
+    slug: 'optimizing-nextjs-applications',
+    date: 'February 22, 2024',
+    category: 'Next.js',
+    keywords: 'performance, next.js, optimization, web vitals',
+    content: 'Full content of the blog post would go here...',
+  },
+  {
+    uid: '3',
+    title: 'Tailwind CSS Best Practices',
+    description: 'How to organize and maintain your Tailwind CSS codebase as it scales.',
+    link: '/blog/tailwind-css-best-practices',
+    slug: 'tailwind-css-best-practices',
+    date: 'January 15, 2024',
+    category: 'CSS',
+    keywords: 'tailwind, css, best practices, organization',
+    content: 'Full content of the blog post would go here...',

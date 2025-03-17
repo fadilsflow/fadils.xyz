@@ -13,6 +13,14 @@ function getBlogPosts(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    // Tambahkan postingan blog lainnya di sini
+    // Contoh:
+    // {
+    //   url: `${BASE_URL}/blog/another-blog-post`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'weekly',
+    //   priority: 0.7,
+    // },
   ]
 }
 
@@ -32,6 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${BASE_URL}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/services`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/blog`,
       lastModified: now,
       changeFrequency: 'weekly',
@@ -40,5 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Blog posts
-  return [...corePages, ...getBlogPosts()]
+  const blogPosts = getBlogPosts()
+
+  return [...corePages, ...blogPosts]
 }

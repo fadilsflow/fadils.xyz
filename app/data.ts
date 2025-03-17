@@ -15,13 +15,15 @@ type WorkExperience = {
   id: string
 }
 
-type BlogPost = {
+interface BlogPost {
+  uid: string
   title: string
   description: string
   link: string
-  uid: string
+  date?: string // Tambahkan properti tanggal (opsional)
+  readingTime?: string // Tambahkan properti waktu baca (opsional)
+  badges?: string[] // Tambahkan properti badge (opsional)
 }
-
 type SocialLink = {
   label: string
   link: string
@@ -68,20 +70,29 @@ export const BLOG_POSTS: BlogPost[] = [
     description: 'How AI is changing the way we design',
     link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
     uid: 'blog-1',
+    date: '2023-10-15',
+    readingTime: '5', // Tambahkan waktu baca
+    badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
   },
   {
     title: 'Why I left my job to start my own company',
     description:
       'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    link: '/blog/why-i-left-my-job',
     uid: 'blog-2',
+    date: '2023-11-20',
+    readingTime: '5', // Tambahkan waktu baca
+    badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
   },
   {
     title: 'What I learned from my first year of freelancing',
     description:
       'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    link: '/blog/first-year-freelancing',
     uid: 'blog-3',
+    date: '2023-12-05',
+    readingTime: '5', // Tambahkan waktu baca
+    badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
   },
 ]
 
@@ -109,6 +120,22 @@ export const SKILLS: Skill[] = [
     link: 'https://linux.org/',
   },
   {
+    label: 'VIM',
+    link: 'https://www.vim.org/',
+  },
+  {
+    label: 'Bun',
+    link: 'https://bun.sh/',
+  },
+  {
+    label: 'Node.js',
+    link: 'https://nodejs.org/',
+  },
+  {
+    label: 'TypeScript',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
     label: 'React',
     link: 'https://react.dev/',
   },
@@ -116,22 +143,12 @@ export const SKILLS: Skill[] = [
     label: 'Next.js',
     link: 'https://nextjs.org/',
   },
-  {
-    label: 'TypeScript',
-    link: 'https://www.typescriptlang.org/',
-  },
+
   {
     label: 'Tailwind CSS',
     link: 'https://tailwindcss.com/',
   },
-  {
-    label: 'Node.js',
-    link: 'https://nodejs.org/',
-  },
-  {
-    label: 'Express.js',
-    link: 'https://expressjs.com/',
-  },
+
   {
     label: 'PostgreSQL',
     link: 'https://www.postgresql.org/',
@@ -141,17 +158,9 @@ export const SKILLS: Skill[] = [
     link: 'https://www.mysql.com/',
   },
   {
-    label: 'Prisma',
-    link: 'https://www.prisma.io/',
-  },
-  {
     label: 'Git',
     link: 'https://git-scm.com/',
   },
-  // {
-  //   label: 'Docker',
-  //   link: 'https://www.docker.com/',
-  // },
 ]
 
 export const EMAIL = 'wahyufadil1140@gmail.com'

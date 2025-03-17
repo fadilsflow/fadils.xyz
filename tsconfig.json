@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs"
-  ],
+, "app/blog/posts/post-1.mdx"  ],
   "exclude": ["node_modules"]
 }

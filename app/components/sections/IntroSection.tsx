@@ -1,4 +1,3 @@
-
 // src/components/sections/IntroSection.tsx
 'use client'
 
@@ -10,9 +9,12 @@ interface IntroSectionProps {
 
 export const IntroSection = memo(({ paragraphs }: IntroSectionProps) => (
   <section className="space-y-2">
-    <h1 className="sr-only">Personal Portfolio</h1>
+    <h1 className="sr-only">Wahyu Akhmad Fadillah - Fullstack Web Developer</h1>
     {paragraphs.map((paragraph, index) => (
-      <p key={index} className="leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <p
+        key={index}
+        className="leading-relaxed text-zinc-600 dark:text-zinc-400"
+      >
         {paragraph}
       </p>
     ))}

@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -182,6 +183,9 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Wahyu Akhmad Fadillah',
+              alternateName: 'Fadil',
+              description:
+                'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
               url: WEBSITE_URL,
               image: 'https://fadils.xyz/profile.png',
               jobTitle: 'Fullstack Web Developer',
@@ -190,7 +194,17 @@ export default function RootLayout({
                 'https://github.com/fadilsflow',
                 'https://linkedin.com/in/wahyu-akhmad-fadillah',
                 'https://twitter.com/wahyuakhmadfad3',
+                'https://instagram.com/fadils.xyz',
               ],
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: `${WEBSITE_URL}/search?q={search_term_string}`,
+                'query-input': 'required name=search_term_string',
+              },
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelance',
+              },
             }),
           }}
         />

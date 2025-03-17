@@ -13,17 +13,18 @@ import {
   PRODUCTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
-
   SKILLS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
 import { ContactSection } from './components/sections/ContactSection'
+import Script from 'next/script'
+import { WEBSITE_URL } from '@/lib/constants'
 
 // SEO meta data
-const META_TITLE = 'Personal Portfolio - Web Developer & Designer'
+const META_TITLE = 'Wahyu Akhmad Fadillah - Fullstack Web Developer'
 const META_DESCRIPTION =
-  'Professional web developer passionate about crafting intuitive, high-performance, and visually stunning web experiences.'
+  'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.'
 const META_KEYWORDS =
   'web developer, frontend developer, UI/UX designer, React, Next.js'
 
@@ -43,12 +44,49 @@ export default function Personal() {
       keywords={META_KEYWORDS}
       canonicalUrl="https://fadils.xyz"
     >
+      <Script
+        id="schema-personal"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ProfilePage',
+            mainEntity: {
+              '@type': 'Person',
+              name: 'Wahyu Akhmad Fadillah',
+              alternateName: 'Fadil',
+              description:
+                'Fullstack Web Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik.',
+              image: `${WEBSITE_URL}/profile.png`,
+              jobTitle: 'Fullstack Web Developer',
+              url: WEBSITE_URL,
+              sameAs: [
+                'https://github.com/fadilsflow',
+                'https://linkedin.com/in/wahyu-akhmad-fadillah',
+                'https://twitter.com/wahyuakhmadfad3',
+                'https://instagram.com/wahyuakhmadfadillah',
+              ],
+              knowsAbout: [
+                'JavaScript',
+                'React',
+                'Next.js',
+                'Node.js',
+                'Web Development',
+              ],
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelance',
+              },
+            },
+          }),
+        }}
+      />
       <IntroSection paragraphs={introParagraphs} />
       <ProductsSection products={PRODUCTS} />
       <SkillsSection skills={SKILLS} />
       <WorkExperienceSection jobs={WORK_EXPERIENCE} />
       <BlogSection posts={BLOG_POSTS} />
-      <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS}/>
+      <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS} />
     </PageLayout>
   )
 }

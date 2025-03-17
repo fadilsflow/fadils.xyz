@@ -34,6 +34,7 @@ export function Header() {
               width={48}
               height={48}
               alt="Profile Picture - Wahyu Akhmad Fadillah"
+              title="Profile Picture - Wahyu Akhmad Fadillah"
               priority
               className="rounded-full transition-transform duration-300 hover:scale-105"
             />
@@ -87,6 +88,7 @@ export function Header() {
                 width={18}
                 height={18}
                 alt={social.alt}
+                title={social.title}
                 className="opacity-70 invert transition-all duration-300 hover:scale-110 hover:opacity-100"
               />
             </a>

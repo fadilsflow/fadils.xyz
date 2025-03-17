@@ -7,6 +7,8 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import { WEBSITE_URL } from '@/lib/constants'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -222,7 +224,8 @@ export default function RootLayout({
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Header />
               {children}
-
+              <SpeedInsights />
+              <Analytics />
               <Footer />
             </div>
           </div>

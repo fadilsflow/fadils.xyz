@@ -9,7 +9,9 @@ interface IntroSectionProps {
 
 export const IntroSection = memo(({ paragraphs }: IntroSectionProps) => (
   <section className="space-y-2">
-    <h1 className="sr-only">Wahyu Akhmad Fadillah - Fullstack Web Developer</h1>
+    <h1 className="sr-only">
+      Saya Wahyu Akhmad Fadillah - Fullstack Web Developer
+    </h1>
     {paragraphs.map((paragraph, index) => (
       <p
         key={index}

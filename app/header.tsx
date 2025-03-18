@@ -70,7 +70,7 @@ export function Header() {
               title: 'Hubungi Wahyu Akhmad Fadillah via WhatsApp',
             },
             {
-              href: 'https://wa.me/+6285157739978',
+              href: 'https://www.instagram.com/fadils.xyz',
               src: '/instagram.svg',
               alt: 'Instagram',
               title: 'Profil Instagram Wahyu Akhmad Fadillah',

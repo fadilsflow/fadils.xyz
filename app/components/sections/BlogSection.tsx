@@ -37,7 +37,7 @@ export const BlogSection = memo(({ posts }: BlogSectionProps) => (
           data-id={post.uid}
         >
           <div className="flex flex-col space-y-2">
-            <h4 className="font-normal dark:text-zinc-100">{post.title}</h4>
+            <h3 className="font-normal dark:text-zinc-100">{post.title}</h3>
             <p className="text-zinc-500 dark:text-zinc-400">
               {post.description}
             </p>

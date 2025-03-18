@@ -225,7 +225,7 @@ export default function RootLayout({
               <Header />
               {children}
               <SpeedInsights />
-              <Analytics />
+              <Analytics /> 
               <Footer />
             </div>
           </div>

@@ -66,9 +66,9 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'mengenal-dan-menginstal-laravel-di-arch-linux',
+    title: 'Mengenal dan Menginstal Laravel di Arch Linux',
     description:
-      'A deep dive into my decision to leave my job and start my own company',
+      'Framework ini dirancang untuk membuat proses pengembangan aplikasi web jadi lebih ekspresif dan menyenangkan, tanpa mengorbankan fungsionalitas aplikasi.',
     link: 'blog/mengenal-dan-menginstal-laravel-di-arch-linux',
     uid: 'blog-1',
     date: '2025-3-18',

@@ -66,31 +66,12 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-    date: '2023-10-15',
-    readingTime: '5', // Tambahkan waktu baca
-    badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
-  },
-  {
-    title: 'Why I left my job to start my own company',
+    title: 'mengenal-dan-menginstal-laravel-di-arch-linux',
     description:
       'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/why-i-left-my-job',
-    uid: 'blog-2',
-    date: '2023-11-20',
-    readingTime: '5', // Tambahkan waktu baca
-    badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/first-year-freelancing',
-    uid: 'blog-3',
-    date: '2023-12-05',
+    link: 'blog/mengenal-dan-menginstal-laravel-di-arch-linux',
+    uid: 'blog-1',
+    date: '2025-3-18',
     readingTime: '5', // Tambahkan waktu baca
     badges: ['AI', 'Design', 'Web Development'], // Tambahkan badge
   },

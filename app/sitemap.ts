@@ -8,12 +8,12 @@ const BASE_URL = 'https://fadils.xyz'
 function getBlogPosts(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${BASE_URL}/blog/exploring-the-intersection-of-design-ai-and-design-engineering`,
+      url: `${BASE_URL}/blog/mengenal-dan-menginstal-laravel-di-arch-linux`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // Tambahkan postingan blog lainnya di sini
+    // Ta mbahkan postingan blog lainnya di sini
     // Contoh:
     // {
     //   url: `${BASE_URL}/blog/another-blog-post`,

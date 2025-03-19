@@ -16,8 +16,8 @@ export const PageLayout = ({
   description,
   keywords,
   children,
-  ogImage = 'https://yourdomain.com/default-og.jpg',
-  canonicalUrl = 'https://yourdomain.com',
+  ogImage = 'https://fadils.xyz/profile.png',
+  canonicalUrl = 'https://fadils.xyz',
 }: PageLayoutProps) => {
   return (
     <>

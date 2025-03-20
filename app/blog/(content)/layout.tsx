@@ -12,7 +12,7 @@ function CopyButton() {
       setText('Copy')
     }, 2000)
   }, [text])
-
+  
   return (
     <button
       onClick={() => {

@@ -17,16 +17,18 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bulba.cloud'),
   title: {
     default: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     template: '%s | Wahyu Akhmad Fadillah',
   },
+  applicationName: 'Wahyu Akhmad Fadillah',
   description:
-    'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+    'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
   openGraph: {
     title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     description:
-      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
     url: WEBSITE_URL,
     siteName: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     locale: 'id_ID',
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -187,7 +189,7 @@ export default function RootLayout({
               name: 'Wahyu Akhmad Fadillah',
               alternateName: 'Fadil',
               description:
-                'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+                'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
               url: WEBSITE_URL,
               image: 'https://fadils.xyz/profile.png',
               jobTitle: 'Fullstack Web Developer',
@@ -225,7 +227,7 @@ export default function RootLayout({
               <Header />
               {children}
               <SpeedInsights />
-              <Analytics /> 
+              <Analytics />
               <Footer />
             </div>
           </div>

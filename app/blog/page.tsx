@@ -1,18 +1,23 @@
-'use client'
-
 import { useMemo } from 'react'
-import { PageLayout } from '@/app/components/layout/PageLayout'
+
 import { IntroSection } from '@/app/components/sections/IntroSection'
 import { ContactSection } from '@/app/components/sections/ContactSection'
 import { EMAIL, SOCIAL_LINKS, BLOG_POSTS } from '../data'
 import { BlogSection } from '../components/sections/BlogSection'
 
-const META_TITLE = 'Blog - Ngulik Bareng Fadil'
-const META_DESCRIPTION =
-  'Tempat random buat ngulik dunia web development, frontend, backend, dan apapun yang berhubungan sama teknologi. Yuk, belajar bareng!'
-const META_KEYWORDS =
-  'web development blog, React tutorial, frontend tips, ngoding seru, teknologi random'
+import { createMetadata, viewport } from '@/lib/metadata'
 
+export const metadata = createMetadata({
+  title: 'Blog - Ngulik Bareng Fadil',
+  description:
+    'Tempat random buat ngulik dunia web development, frontend, backend, dan apapun yang berhubungan sama teknologi. Yuk, belajar bareng!',
+  path: '/blog',
+  keywords: [
+    'web development blog, React tutorial, frontend tips, ngoding seru, teknologi random',
+  ],
+})
+
+export { viewport }
 export default function Blog() {
   const introParagraphs = useMemo(
     () => [
@@ -22,15 +27,10 @@ export default function Blog() {
   )
 
   return (
-    <PageLayout
-      title={META_TITLE}
-      description={META_DESCRIPTION}
-      keywords={META_KEYWORDS}
-      canonicalUrl="https://fadils.xyz/blog"
-    >
+    <div>
       <IntroSection paragraphs={introParagraphs} />
       <BlogSection posts={BLOG_POSTS} />
       <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS} />
-    </PageLayout>
+    </div>
   )
 }

@@ -1,18 +1,27 @@
-'use client'
+
 
 import { useMemo } from 'react'
-import { PageLayout } from '@/app/components/layout/PageLayout'
+
 import { IntroSection } from '@/app/components/sections/IntroSection'
 import { Section } from '@/app/components/sections/Section'
 import { ContactSection } from '@/app/components/sections/ContactSection'
 import { EMAIL, SOCIAL_LINKS } from '../data'
 
-// SEO meta data for Services page
-const META_TITLE = 'Layanan - Solusi Web Development & Desain'
-const META_DESCRIPTION =
-  'Temukan layanan web development dan desain yang saya tawarkan, mulai dari pembuatan website custom, desain UI/UX, hingga konsultasi teknis.'
-const META_KEYWORDS =
-  'layanan web development, desain UI/UX, konsultasi teknis, frontend development, React development'
+import { createMetadata, viewport } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: 'Layanan - Solusi Web Development & Desain',
+  description:
+    'Temukan layanan web development dan desain yang saya tawarkan, mulai dari pembuatan website custom, desain UI/UX, hingga konsultasi teknis.',
+  path: '/services',
+  ogImage: 'profile.png',
+  ogImageAlt: 'Wahyu Akhmad Fadillah',
+  keywords: [
+    'layanan web development, desain UI/UX, konsultasi teknis, frontend development, React development',
+  ],
+})
+
+export { viewport }
 
 // Service type definition
 interface Service {
@@ -34,7 +43,8 @@ export default function Services() {
     () => [
       {
         title: 'Pembuatan Website Custom',
-        description: 'Saya membuat website custom yang sesuai dengan identitas brand dan tujuan bisnis Anda.',
+        description:
+          'Saya membuat website custom yang sesuai dengan identitas brand dan tujuan bisnis Anda.',
         features: [
           'Desain responsif yang tampil sempurna di semua perangkat',
           'Optimasi performa untuk kecepatan loading yang tinggi',
@@ -45,7 +55,8 @@ export default function Services() {
       },
       {
         title: 'Frontend Development',
-        description: 'Saya membangun antarmuka pengguna modern dan interaktif menggunakan teknologi dan framework terbaru.',
+        description:
+          'Saya membangun antarmuka pengguna modern dan interaktif menggunakan teknologi dan framework terbaru.',
         features: [
           'Pengembangan aplikasi dengan React dan Next.js',
           'Implementasi manajemen state',
@@ -56,7 +67,8 @@ export default function Services() {
       },
       {
         title: 'Desain UI/UX',
-        description: 'Saya merancang pengalaman pengguna yang intuitif dan menarik untuk memandu pengguna dalam berinteraksi.',
+        description:
+          'Saya merancang pengalaman pengguna yang intuitif dan menarik untuk memandu pengguna dalam berinteraksi.',
         features: [
           'Penelitian pengguna dan pengembangan persona',
           'Wireframing dan prototyping',
@@ -67,7 +79,8 @@ export default function Services() {
       },
       {
         title: 'Konsultasi Teknis',
-        description: 'Saya memberikan panduan ahli terkait keputusan teknis dan strategi implementasi.',
+        description:
+          'Saya memberikan panduan ahli terkait keputusan teknis dan strategi implementasi.',
         features: [
           'Rekomendasi teknologi stack',
           'Perencanaan arsitektur dan desain',
@@ -84,43 +97,45 @@ export default function Services() {
     () => [
       {
         title: 'Discovery',
-        description: 'Kita mulai dengan eksplorasi mendalam tentang tujuan, kebutuhan, dan visi Anda.',
+        description:
+          'Kita mulai dengan eksplorasi mendalam tentang tujuan, kebutuhan, dan visi Anda.',
       },
       {
         title: 'Perencanaan',
-        description: 'Saya membuat roadmap detail yang mencakup ruang lingkup, timeline, dan deliverables.',
+        description:
+          'Saya membuat roadmap detail yang mencakup ruang lingkup, timeline, dan deliverables.',
       },
       {
         title: 'Desain',
-        description: 'Saya mengembangkan wireframe dan desain visual untuk menentukan tampilan dan nuansa proyek Anda.',
+        description:
+          'Saya mengembangkan wireframe dan desain visual untuk menentukan tampilan dan nuansa proyek Anda.',
       },
       {
         title: 'Pengembangan',
-        description: 'Saya menulis kode yang bersih dan efisien untuk menghidupkan desain dengan semua fungsionalitas yang dibutuhkan.',
+        description:
+          'Saya menulis kode yang bersih dan efisien untuk menghidupkan desain dengan semua fungsionalitas yang dibutuhkan.',
       },
       {
         title: 'Testing',
-        description: 'Setiap proyek melalui proses testing yang ketat untuk memastikan kualitas, performa, dan kegunaan.',
+        description:
+          'Setiap proyek melalui proses testing yang ketat untuk memastikan kualitas, performa, dan kegunaan.',
       },
       {
         title: 'Launch',
-        description: 'Setelah disetujui, proyek Anda akan diluncurkan dengan deployment dan monitoring yang cermat.',
+        description:
+          'Setelah disetujui, proyek Anda akan diluncurkan dengan deployment dan monitoring yang cermat.',
       },
       {
         title: 'Dukungan',
-        description: 'Saya menawarkan dukungan dan maintenance berkelanjutan untuk menjaga proyek Anda tetap berjalan lancar.',
+        description:
+          'Saya menawarkan dukungan dan maintenance berkelanjutan untuk menjaga proyek Anda tetap berjalan lancar.',
       },
     ],
     [],
   )
 
   return (
-    <PageLayout
-      title={META_TITLE}
-      description={META_DESCRIPTION}
-      keywords={META_KEYWORDS}
-      canonicalUrl="https://fadils.xyz/services"
-    >
+    <div>
       <IntroSection paragraphs={introParagraphs} />
 
       <Section id="services-heading" title="Layanan Saya">
@@ -133,12 +148,16 @@ export default function Services() {
               <h3 className="mb-3 text-lg font-medium text-zinc-900 dark:text-zinc-100">
                 {service.title}
               </h3>
-              <p className="mb-4 text-zinc-600 dark:text-zinc-400">{service.description}</p>
+              <p className="mb-4 text-zinc-600 dark:text-zinc-400">
+                {service.description}
+              </p>
               <ul className="space-y-2">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start">
                     <span className="mr-2 text-emerald-600">•</span>
-                    <span className="text-zinc-600 dark:text-zinc-400">{feature}</span>
+                    <span className="text-zinc-600 dark:text-zinc-400">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -152,13 +171,17 @@ export default function Services() {
           {processSteps.map((step, index) => (
             <div key={index} className="flex items-start">
               <div className="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-zinc-200 dark:bg-zinc-800">
-                <span className="font-medium text-zinc-800 dark:text-zinc-200">{index + 1}</span>
+                <span className="font-medium text-zinc-800 dark:text-zinc-200">
+                  {index + 1}
+                </span>
               </div>
               <div>
                 <h4 className="mb-1 text-lg font-medium text-zinc-900 dark:text-zinc-100">
                   {step.title}
                 </h4>
-                <p className="text-zinc-600 dark:text-zinc-400">{step.description}</p>
+                <p className="text-zinc-600 dark:text-zinc-400">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}
@@ -166,6 +189,6 @@ export default function Services() {
       </Section>
 
       <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS} />
-    </PageLayout>
+    </div>
   )
 }

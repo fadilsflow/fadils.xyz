@@ -1,8 +1,5 @@
-// src/pages/personal.tsx (refaktorisasi ke komponen reusable)
-'use client'
-
 import { useMemo } from 'react'
-import { PageLayout } from '@/app/components/layout/PageLayout'
+
 import { IntroSection } from '@/app/components/sections/IntroSection'
 import { ProductsSection } from '@/app/components/sections/ProductsSection'
 import { SkillsSection } from '@/app/components/sections/SkillsSection'
@@ -21,12 +18,19 @@ import { ContactSection } from './components/sections/ContactSection'
 import Script from 'next/script'
 import { WEBSITE_URL } from '@/lib/constants'
 
-// SEO meta data
-const META_TITLE = 'Wahyu Akhmad Fadillah - Fullstack Web Developer'
-const META_DESCRIPTION =
-  'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.'
-const META_KEYWORDS =
-  'web developer, frontend developer, UI/UX designer, React, Next.js'
+import { createMetadata, viewport } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
+  description:
+    'Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+  path: '/',
+  keywords: [
+    'web developer, frontend developer, UI/UX designer, React, Next.js',
+  ],
+})
+
+export { viewport }
 
 export default function Personal() {
   const introParagraphs = useMemo(
@@ -38,12 +42,7 @@ export default function Personal() {
   )
 
   return (
-    <PageLayout
-      title={META_TITLE}
-      description={META_DESCRIPTION}
-      keywords={META_KEYWORDS}
-      canonicalUrl="https://fadils.xyz"
-    >
+    <div>
       <Script
         id="schema-personal"
         type="application/ld+json"
@@ -87,6 +86,6 @@ export default function Personal() {
       <WorkExperienceSection jobs={WORK_EXPERIENCE} />
       <BlogSection posts={BLOG_POSTS} />
       <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS} />
-    </PageLayout>
+    </div>
   )
 }

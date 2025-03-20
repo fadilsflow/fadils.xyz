@@ -1,18 +1,23 @@
-'use client'
-
 import { useMemo } from 'react'
-import { PageLayout } from '@/app/components/layout/PageLayout'
+
 import { IntroSection } from '@/app/components/sections/IntroSection'
 import { Section } from '@/app/components/sections/Section'
 import { ContactSection } from '@/app/components/sections/ContactSection'
 import { EMAIL, SOCIAL_LINKS } from '../data'
 
-// SEO meta data for About page
-const META_TITLE = 'Tentang Saya - Wahyu Akhmad Fadillah'
-const META_DESCRIPTION =
-  'Kenalan lebih dekat dengan Wahyu Akhmad Fadillah, mahasiswa Teknik Informatika yang fokus pada web development dan sedang membangun startup bernama Bulba Cloud.'
-const META_KEYWORDS =
-  'tentang wahyu akhmad fadillah, web developer, mahasiswa teknik informatika, bulba cloud, vps hosting, game hosting'
+import { createMetadata, viewport } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: 'Tentang Saya - Wahyu Akhmad Fadillah',
+  description:
+    'Kenalan lebih dekat dengan Wahyu Akhmad Fadillah, mahasiswa Teknik Informatika yang fokus pada web development dan sedang membangun startup bernama Bulba Cloud.',
+  path: '/about',
+  keywords: [
+    'tentang wahyu akhmad fadillah, web developer, mahasiswa teknik informatika, bulba cloud, vps hosting, game hosting',
+  ],
+})
+
+export { viewport }
 
 export default function About() {
   const introParagraphs = useMemo(
@@ -39,12 +44,7 @@ export default function About() {
   )
 
   return (
-    <PageLayout
-      title={META_TITLE}
-      description={META_DESCRIPTION}
-      keywords={META_KEYWORDS}
-      canonicalUrl="https://fadils.xyz/about"
-    >
+    <div>
       <IntroSection paragraphs={introParagraphs} />
 
       <Section id="background-heading" title="Latar Belakang">
@@ -74,6 +74,6 @@ export default function About() {
       </Section>
 
       <ContactSection email={EMAIL} socialLinks={SOCIAL_LINKS} />
-    </PageLayout>
+    </div>
   )
 }

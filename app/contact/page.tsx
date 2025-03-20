@@ -1,18 +1,25 @@
-'use client'
-
 import { useMemo } from 'react'
-import { PageLayout } from '@/app/components/layout/PageLayout'
+
 import { IntroSection } from '@/app/components/sections/IntroSection'
 import { Section } from '@/app/components/sections/Section'
 import { MagneticSocialLink } from '@/app/components/ui/MagneticSocialLink'
 import { EMAIL, SOCIAL_LINKS } from '../data'
 
-// SEO meta data for Contact page
-const META_TITLE = 'Hubungi Saya - Mari Berkolaborasi!'
-const META_DESCRIPTION =
-  'Hubungi saya untuk diskusi proyek, kolaborasi, atau sekadar menyapa. Saya selalu senang mendengar ide-ide baru!'
-const META_KEYWORDS =
-  'hubungi fadil, kolaborasi proyek, konsultasi web development, freelance developer'
+import { createMetadata, viewport } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: 'Hubungi Saya - Mari Berkolaborasi!',
+  description:
+    'Hubungi saya untuk diskusi proyek, kolaborasi, atau sekadar menyapa. Saya selalu senang mendengar ide-ide baru!',
+  path: '/contact',
+  ogImage: 'profile.png',
+  ogImageAlt: 'Wahyu Akhmad Fadillah',
+  keywords: [
+    'hubungi fadil, kolaborasi proyek, konsultasi web development, freelance developer',
+  ],
+})
+
+export { viewport }
 
 export default function Contact() {
   const introParagraphs = useMemo(
@@ -24,12 +31,7 @@ export default function Contact() {
   )
 
   return (
-    <PageLayout
-      title={META_TITLE}
-      description={META_DESCRIPTION}
-      keywords={META_KEYWORDS}
-      canonicalUrl="https://fadils.xyz/contact"
-    >
+    <div>
       <IntroSection paragraphs={introParagraphs} />
 
       <div className="mt-12">
@@ -98,6 +100,6 @@ export default function Contact() {
           </div>
         </Section>
       </div>
-    </PageLayout>
+    </div>
   )
 }

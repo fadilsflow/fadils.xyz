@@ -10,11 +10,6 @@ export function Header() {
     { href: '/blog', label: 'Blog', title: 'Blog Wahyu Akhmad Fadillah' },
     { href: '/about', label: 'About', title: 'Tentang Wahyu Akhmad Fadillah' },
     {
-      href: '/services',
-      label: 'Services',
-      title: 'Layanan Fullstack Web Development',
-    },
-    {
       href: '/contact',
       label: 'Contact',
       title: 'Hubungi Wahyu Akhmad Fadillah',

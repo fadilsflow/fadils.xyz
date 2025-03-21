@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   },
   applicationName: 'Wahyu Akhmad Fadillah',
   description:
-    'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
+    'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam TypeScript, React, Next.js, dan Node.js.',
   openGraph: {
     title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     description:
-      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
+      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam TypeScript, React, Next.js, dan Node.js.',
     url: WEBSITE_URL,
     siteName: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     locale: 'id_ID',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   keywords: [
     'fullstack developer',
     'web development',
-    'javascript',
+    'TypeScript',
     'react',
     'next.js',
     'node.js',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
     description:
-      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+      'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam TypeScript, React, Next.js, dan Node.js.',
     site: '@wahyuakhmadfad3',
     creator: '@wahyuakhmadfad3',
     images: [`${WEBSITE_URL}/profile.png`],
@@ -189,11 +189,11 @@ export default function RootLayout({
               name: 'Wahyu Akhmad Fadillah',
               alternateName: 'Fadil',
               description:
-                'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam Typescript, React, Next.js, dan Node.js.',
+                'Seorang Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam TypeScript, React, Next.js, dan Node.js.',
               url: WEBSITE_URL,
               image: 'https://fadils.xyz/profile.png',
               jobTitle: 'Fullstack Web Developer',
-              knowsAbout: ['JavaScript', 'React', 'Next.js', 'Node.js'],
+              knowsAbout: ['TypeScript', 'React', 'Next.js', 'Node.js'],
               sameAs: [
                 'https://github.com/fadilsflow',
                 'https://linkedin.com/in/wahyu-akhmad-fadillah',

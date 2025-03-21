@@ -23,7 +23,7 @@ import { createMetadata, viewport } from '@/lib/metadata'
 export const metadata = createMetadata({
   title: 'Wahyu Akhmad Fadillah - Fullstack Web Developer',
   description:
-    'Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam JavaScript, React, Next.js, dan Node.js.',
+    'Fullstack Developer yang passionate dalam membangun aplikasi web yang cepat, intuitif, dan menarik. Ahli dalam TypeScript, React, Next.js, dan Node.js.',
   path: '/',
   keywords: [
     'web developer, frontend developer, UI/UX designer, React, Next.js',
@@ -66,7 +66,7 @@ export default function Personal() {
                 'https://instagram.com/wahyuakhmadfadillah',
               ],
               knowsAbout: [
-                'JavaScript',
+                'TypeScript',
                 'React',
                 'Next.js',
                 'Node.js',
